@@ -1,7 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { Heart } from 'lucide-react';
 
 const Story: React.FC = () => {
+  const animationRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: animationRef,
+    offset: ["start end", "center center"]
+  });
+
+  // Animation values
+  // Start far apart and come to natural position (0%)
+  const brideX = useTransform(scrollYProgress, [0, 0.8], ["-100vw", "0%"]);
+  const groomX = useTransform(scrollYProgress, [0, 0.8], ["100vw", "0%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+  const heartScale = useTransform(scrollYProgress, [0.7, 1], [0, 1]);
+
   return (
     <section id="story" className="py-20 md:py-32 bg-stone-50 overflow-hidden">
       <div className="container mx-auto px-6">
@@ -17,7 +31,7 @@ const Story: React.FC = () => {
           <div className="w-16 h-[2px] bg-gold-500 mx-auto"></div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-0">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-0 mb-20">
           {/* Bride Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -62,6 +76,43 @@ const Story: React.FC = () => {
             </p>
           </motion.div>
         </div>
+
+        {/* Animated Meeting Section */}
+        <div ref={animationRef} className="relative h-48 md:h-64 flex items-center justify-center overflow-visible mb-12">
+           <div className="flex items-center gap-4 md:gap-12 relative z-10">
+             {/* Simple Girl */}
+             <motion.div 
+               style={{ x: brideX, opacity }}
+               className="w-32 h-32 md:w-48 md:h-48"
+             >
+                <img 
+                  src="https://api.dicebear.com/9.x/micah/svg?seed=Sruthi&hair=full&mouth=smile&baseColor=f9a606" 
+                  alt="Girl" 
+                  className="w-full h-full drop-shadow-xl"
+                />
+             </motion.div>
+
+             {/* Heart Icon appearing when they meet */}
+             <motion.div style={{ scale: heartScale }} className="text-red-500">
+                <Heart fill="currentColor" size={48} className="md:w-16 md:h-16" />
+             </motion.div>
+
+             {/* Simple Boy */}
+             <motion.div 
+               style={{ x: groomX, opacity }}
+               className="w-32 h-32 md:w-48 md:h-48"
+             >
+                <img 
+                  src="https://api.dicebear.com/9.x/micah/svg?seed=Rahul&hair=fonze&mouth=smile&baseColor=8d470b" 
+                  alt="Boy" 
+                  className="w-full h-full drop-shadow-xl"
+                />
+             </motion.div>
+           </div>
+           
+           {/* Decorative track line */}
+           <div className="absolute top-1/2 left-0 w-full h-[1px] bg-stone-200 -z-0"></div>
+        </div>
         
         {/* Joint Story */}
         <motion.div 
@@ -69,7 +120,7 @@ const Story: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="mt-20 md:mt-32 max-w-2xl mx-auto text-center"
+            className="max-w-2xl mx-auto text-center"
         >
             <h4 className="font-serif text-2xl text-stone-800 mb-6 italic">"Two souls, one heart."</h4>
             <p className="text-stone-600 leading-relaxed">

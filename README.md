@@ -14,7 +14,7 @@ A modern, responsive, and aesthetic wedding website built with **React**, **Type
 
 ## Tech Stack
 
-- **React 19**: UI Library.
+- **React 18**: UI Library.
 - **TypeScript**: Type safety.
 - **Tailwind CSS**: Styling (loaded via CDN).
 - **Framer Motion**: Animations.
@@ -36,27 +36,16 @@ You will need **Node.js** installed on your computer.
     ```
 4.  Open the URL shown in your terminal (usually `http://localhost:5173`).
 
-## How to Deploy to GitHub Pages
+## How to Deploy (Automated)
 
-1.  **Update `vite.config.ts`**: Ensure the `base` property is set to `'./'` (already configured).
-2.  **Build the Project**:
-    Run the following command in your terminal:
-    ```bash
-    npm run build
-    ```
-    This will create a `dist` folder containing the static files.
+This project is configured to deploy automatically to GitHub Pages using GitHub Actions.
 
-3.  **Upload to GitHub**:
-    - Commit and push your code to your GitHub repository.
-
-4.  **Deploy**:
-    - **Option A (Manual)**:
-        - Install the `gh-pages` package: `npm install gh-pages --save-dev`
-        - Add a script to `package.json`: `"deploy": "gh-pages -d dist"`
-        - Run `npm run deploy`.
-    - **Option B (Settings)**:
-        - Go to your Repository Settings > Pages.
-        - Set the source to **GitHub Actions** (if using a workflow) or push the contents of your `dist` folder to a branch named `gh-pages` and select that branch here.
+1.  **Push your code**: Ensure your code is pushed to the `main` branch on GitHub.
+2.  **Configure Repository Settings**:
+    - Go to your GitHub repository.
+    - Click on **Settings** > **Pages** (in the left sidebar).
+    - Under **Build and deployment** > **Source**, select **GitHub Actions**.
+    - The deployment workflow will automatically run next time you push code.
 
 ## Project Structure
 
