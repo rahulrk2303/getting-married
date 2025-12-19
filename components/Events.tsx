@@ -2,7 +2,22 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
-const events = [
+interface EventItem {
+  title: string;
+  time: string;
+  desc: string;
+  img: string;
+  date?: string;
+  featured?: boolean;
+}
+
+interface EventSection {
+  category: string;
+  date?: string;
+  items: EventItem[];
+}
+
+const events: EventSection[] = [
   {
     category: "Pre-Wedding",
     date: "April 02, 2025",
