@@ -66,7 +66,7 @@ const Hero: React.FC = memo(() => {
       </motion.div>
 
       {/* 1. TOP SECTION: Names */}
-      <div className="relative z-10 text-center pt-32 md:pt-44 px-6">
+      <div className="relative z-10 text-center pt-32 md:pt-40 px-6">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ const Hero: React.FC = memo(() => {
       <div className="flex-grow min-h-[120px]" />
 
       {/* 3. BOTTOM SECTION: Info, Timer, RSVP */}
-      <div className="relative z-10 text-center pb-20 md:pb-28 px-6">
+      <div className="relative z-10 text-center pb-20 md:pb-22 px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
