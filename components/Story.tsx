@@ -1,6 +1,10 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Heart } from 'lucide-react';
+import brideImg from '../assets/bride.jpeg';
+import groomImg from '../assets/groom.jpeg';
+import comicBride from '../assets/comic_bride1.png';
+import comicGroom from '../assets/comic_groom1.png';
 
 const Story: React.FC = () => {
   const animationRef = useRef<HTMLDivElement>(null);
@@ -42,7 +46,7 @@ const Story: React.FC = () => {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 mb-8 rounded-full overflow-hidden border-4 border-white shadow-lg relative">
                <img
-                src="./assets/bride.jpeg"
+                src={brideImg}
                 alt="Sruthi"
                 className="w-full h-full object-cover"
               />
@@ -64,7 +68,7 @@ const Story: React.FC = () => {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 mb-8 rounded-full overflow-hidden border-4 border-white shadow-lg">
               <img
-                src="./assets/groom.jpeg"
+                src={groomImg}
                 alt="Rahul"
                 className="w-full h-full object-cover"
               />
@@ -86,7 +90,7 @@ const Story: React.FC = () => {
                className="w-32 h-32 md:w-48 md:h-48"
              >
                 <img 
-                  src="./assets/comic_bride1.png" 
+                  src={comicBride} 
                   alt="Girl" 
                   // className="w-full h-full"
                 />
@@ -103,7 +107,7 @@ const Story: React.FC = () => {
                className="w-28 h-28 md:w-40 md:h-40"
              >
                 <img 
-                  src="./assets/comic_groom1.png" 
+                  src={comicGroom} 
                   alt="Boy" 
                   // className="w-full h-full"
                 />

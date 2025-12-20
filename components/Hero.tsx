@@ -1,5 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import { motion } from 'framer-motion';
+import backgroundImg from '../assets/background1.jpeg';
 
 // --- SUB-COMPONENT: TIMER ---
 // This handles its own state, so the Hero (and background) never re-renders!
@@ -61,7 +62,7 @@ const Hero: React.FC = memo(() => {
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat grayscale blur-sm transform-gpu"
         style={{ 
-            backgroundImage: `url('./assets/background1.jpeg')`,
+            backgroundImage: `url(${backgroundImg})`,
             // This ensures the image stays fixed even during bounces/scrolls
             willChange: 'transform' 
         }}

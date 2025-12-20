@@ -1,6 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin } from 'lucide-react';
+import engagementImg from '../assets/engagement1.png';
+import haldiImg from '../assets/haldi1.png';
+import sangeetImg from '../assets/sangeet1.png';
+import weddingImg from '../assets/wedding1.png';
+import receptionChennaiImg from '../assets/reception_chennai.png';
+import receptionMannargudiImg from '../assets/reception_mannargudi.png';
 
 interface EventItem {
   title: string;
@@ -28,21 +34,21 @@ const events: EventSection[] = [
         title: "Engagement",
         time: "11:00 AM",
         desc: "The official ring exchange ceremony marking the beginning of our festivities.",
-        img: "./assets/engagement1.png",
+        img: engagementImg,
         venue: "MGM Beach Resort (PH1 Lawn)"
       },
       {
         title: "Haldi",
         time: "2:00 PM",
         desc: "A colorful afternoon filled with turmeric, laughter, and joy.",
-        img: "./assets/haldi1.png",
+        img: haldiImg,
         venue: "MGM Beach Resort (PH1 Lawn)"
       },
       {
         title: "Sangeet",
         time: "6:00 PM",
         desc: "An evening of music and dance. Get your dancing shoes ready!",
-        img: "./assets/sangeet1.png",
+        img: sangeetImg,
         venue: "MGM Beach Resort (Lighthouse Lawn)"
       }
     ]
@@ -55,7 +61,7 @@ const events: EventSection[] = [
         title: "Muhurtham",
         time: "8:45 AM",
         desc: "The sacred moment where we tie the knot surrounded by blessings.",
-        img: "./assets/wedding1.png",
+        img: weddingImg,
         featured: true,
         venue: "MGM Beach Resort (Waterfront Lawn)"
       }
@@ -69,7 +75,7 @@ const events: EventSection[] = [
         date: "April 05, 2026",
         time: "6:00 PM",
         desc: "Join us for a grand dinner reception in Chennai.",
-        img: "./assets/reception_chennai.png",
+        img: receptionChennaiImg,
         venue: "M Convention, Vanagaram (The Grand Ballroom)"
       },
       {
@@ -77,7 +83,7 @@ const events: EventSection[] = [
         date: "April 08, 2026",
         time: "6:00 PM",
         desc: "Celebrating with our extended family in our hometown.",
-        img: "./assets/reception_mannargudi.png",
+        img: receptionMannargudiImg,
         venue: "PP Mahaal, Mannargudi"
       }
     ]
