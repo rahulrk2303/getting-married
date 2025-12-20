@@ -73,7 +73,7 @@ const Hero: React.FC = memo(() => {
           transition={{ duration: 1 }}
         >
           <span className="inline-block px-4 py-1 border-y border-white/20 text-[10px] md:text-xs uppercase tracking-[0.6em] text-amber-100/80 mb-8">
-            We're Getting Married
+            The Wedding Celebration of
           </span>
         </motion.div>
 
