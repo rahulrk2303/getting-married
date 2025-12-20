@@ -102,7 +102,7 @@ const Gallery: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05, duration: 0.5 }} // Faster stagger
-              className="break-inside-avoid mb-4 overflow-hidden rounded-lg group cursor-pointer"
+              className="break-inside-avoid mb-4 overflow-hidden rounded-lg group cursor-pointer relative"
             >
               <img
                 src={src}

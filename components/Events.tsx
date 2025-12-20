@@ -46,7 +46,7 @@ const events: EventSection[] = [
       },
       {
         title: "Sangeet",
-        time: "6:00 PM",
+        time: "6:30 PM",
         desc: "An evening of music and dance. Get your dancing shoes ready!",
         img: sangeetImg,
         venue: "MGM Beach Resort (Lighthouse Lawn)"
@@ -73,18 +73,18 @@ const events: EventSection[] = [
       {
         title: "Chennai Reception",
         date: "April 05, 2026",
-        time: "6:00 PM",
+        time: "7:00 PM",
         desc: "Join us for a grand dinner reception in Chennai.",
         img: receptionChennaiImg,
-        venue: "M Convention, Vanagaram (The Grand Ballroom)"
+        venue: "M Weddings & Conventions, Vanagaram (The Grand Ballroom)"
       },
       {
         title: "Mannargudi Reception",
         date: "April 08, 2026",
-        time: "6:00 PM",
+        time: "7:00 PM",
         desc: "Celebrating with our extended family in our hometown.",
         img: receptionMannargudiImg,
-        venue: "PP Mahaal, Mannargudi"
+        venue: "PP Mahall, Mannargudi"
       }
     ]
   }

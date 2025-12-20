@@ -14,19 +14,19 @@ const locations: (LocationItem & { date: string })[] = [
   },
   {
     id: 'l2',
-    name: 'M Convention',
+    name: 'M Weddings & Conventions',
     type: 'Reception',
     date: 'April 4, 2026',
     address: 'Vanagaram, Chennai, Tamil Nadu 600095',
-    mapQuery: 'M+Convention+Vanagaram'
+    mapQuery: 'M+Weddings+Conventions'
   },
   {
     id: 'l3',
-    name: 'PP Mahaal',
+    name: 'PP Mahall',
     type: 'Reception',
     date: 'April 7, 2026',
     address: 'Mannargudi, Tamil Nadu 614001',
-    mapQuery: 'Mannargudi' 
+    mapQuery: 'PP+Mahall' 
   }
 ];
 
