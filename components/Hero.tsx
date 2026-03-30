@@ -155,14 +155,16 @@ const Hero: React.FC = memo(() => {
             </motion.a>
 
             <motion.a
-              href="#rsvp"
+              href="https://www.youtube.com/live/eZW_h1MQ4Ao?si=M4TjIQUSd-D3BSlf"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative inline-block px-6 py-3 md:px-14 md:py-4 overflow-hidden border border-white/20 backdrop-blur-sm transition-all duration-500 hover:border-amber-200/50"
+              className="group relative inline-block px-6 py-3 md:px-14 md:py-4 overflow-hidden border border-gold-500/60 backdrop-blur-sm transition-all duration-500 hover:border-gold-300"
             >
-              <span className="absolute inset-0 w-0 bg-white transition-all duration-500 ease-out group-hover:w-full"></span>
-              <span className="relative text-[8px] md:text-[10px] uppercase tracking-[0.5em] font-bold text-white group-hover:text-stone-900 transition-colors duration-500">
-                Kindly RSVP
+              <span className="absolute inset-0 w-0 bg-gold-500 transition-all duration-500 ease-out group-hover:w-full"></span>
+              <span className="relative text-[8px] md:text-[10px] uppercase tracking-[0.5em] font-bold text-gold-300 group-hover:text-stone-900 transition-colors duration-500">
+                Watch Live
               </span>
             </motion.a>
           </div>
